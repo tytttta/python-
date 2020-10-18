@@ -175,3 +175,10 @@ print("I invite %s man"  %str(len(names)))
 ````
 ## 3-10 尝试使用各个函数 ： 想想可存储到列表中的东西， 如山岳、 河流、 国家、 城市、 语言或你喜欢的任何东西。 编写一个程序， 在其中创建一个包含这些元素的列表， 然后， 对于本章介绍的每个函数， 都至少使用一次来处理这个列表。
  略
+ 
+## 3-11 有意引发错误 ： 如果你还没有在程序中遇到过索引错误， 就尝试引发一个这种错误。 在你的一个程序中， 修改其中的索引， 以引发索引错误。 关闭程序前， 务必消除这个错误。
+````
+names = ["Tom", "Mark","Bill","Eric"]
+print(names[0] + ", I invite you paticipate a meeeting.")
+# print(names[4] + ", I invite you paticipate a meeeting.")
+````
