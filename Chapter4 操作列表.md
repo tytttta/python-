@@ -22,7 +22,7 @@ for animal in animals:
     print(animal)
     print("A %s would make a great pet" %animal)
 print("ny of these animals would make a great pet!")
-```
+````
 ## 4-3 数到20 ： 使用一个for 循环打印数字1~20（含） 。
 ````
 for x in range(1, 21):
@@ -60,7 +60,7 @@ nums = list(range(3, 31, 3))
 # nums = list( x for x in range(3, 31) if x%3==0 )
 for x in nums:
     print(x)
-```
+````
 ## 4-8 立方 ： 
 - 将同一个数字乘三次称为立方。 例如， 在Python中， 2的立方用2**3 表示。 请创建一个列表， 其中包含前10个整数（即1~10） 的立方， 再使用一个for 循环将这些立方数都打印出来。
 ````
@@ -90,7 +90,7 @@ print(squars[4:7])
 print("Three items fromthe middle of the list are: ")
 print(squars[-3:])
 ````
-##4-11 你的比萨和我的比萨 ： 
+## 4-11 你的比萨和我的比萨 ： 
 - 在你为完成练习4-1而编写的程序中， 创建比萨列表的副本， 并将其存储到变量friend_pizzas 中， 再完成如下任务。
 - 在原来的比萨列表中添加一种比萨。
 - 在列表friend_pizzas 中添加另一种比萨。
