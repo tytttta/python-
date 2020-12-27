@@ -116,8 +116,22 @@ for person in fav_nums:
 
 ## 6-11 城市 ： 创建一个名为cities 的字典， 其中将三个城市名用作键； 对于每座城市， 都创建一个字典， 并在其中包含该城市所属的国家、 人口约数以及一个有关该城市的事实。 在表示每座城市的字典中， 应包含country 、 population 和fact 等键。 将每座城市的名字以及有关它们的信息都打印出来。
 ````
+citys = {"NewYork" : {"country":"American", "population": 10,"fact":"American city"}
+, "London":{"country": "English", "population": 20, 'fact':"English city"}
+ , 'Nanjing':{'country':'Chinese', 'population': 200, 'fact':'Chinese city'}}  
+
+for key, values in citys.items():
+    print('the city name is: %s' %key )
+    print('the country of city is: %s'  %values["country"])
+    print('the population of city is: %s' %values["population"])
+    print('the fact of city is: %s' %values["fact"])
+
 ````
 
 ## 6-12 扩展 ： 本章的示例足够复杂， 可以以很多方式进行扩展了。 请对本章的一个示例进行扩展： 添加键和值、 调整程序要解决的问题或改进输出的格式。
 ````
+fav_numsOrAlpha = {"Tom": 5, "Sam": 2, "Dean": [6, 8], "Bill": [3, 5, 7], "Sara": 8}
+fav_numsOrAlpha['Kate'] = 'a'
+for name, fav in fav_numsOrAlpha.items():
+    print('%s likes %s' %(name, fav_numsOrAlpha[name]))
 ````
