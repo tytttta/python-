@@ -309,6 +309,16 @@ my_tesla.battery.describe_battery()
 ````
 ## 9-13 使用OrderedDict ： 在练习6-4中， 你使用了一个标准字典来表示词汇表。 请使用OrderedDict 类来重写这个程序， 并确认输出的顺序与你在字典中添加键—值对的顺序一致。
 ````
+from collections import OrderedDict
+
+fav_nums = OrderedDict()
+fav_nums['Tom']=5
+fav_nums['Dean']=6
+fav_nums['Sam']=2
+
+for name, num in fav_nums.items():
+    print(name.title() + "'s favorite num is " + str(num) + ".")
+
 ````
 
 ## 9-14 骰子 ： 模块random 包含以各种方式生成随机数的函数， 其中的randint() 返回一个位于指定范围内的整数， 例如， 下面的代码返回一个1~6内的整数：
@@ -317,8 +327,30 @@ x = randint(1, 6)
 
 * 请创建一个Die 类， 它包含一个名为sides 的属性， 该属性的默认值为6。 
 * 编写一个名为roll_die() 的方法， 它打印位于1和骰子面数之间的随机数。 创建一个6面的骰子， 再掷10次。 
-* 创建一个10面的骰子和一个20面的骰子， 并将它们都掷10次
+* 创建一个10面的骰子和一个20面的骰子， 并将它们都掷10次.
 ````
+from random import randint
+class Die():
+    def __init__(self, sides=6):
+        self.sides = sides
+
+    def roll_side(self):
+        print(randint(1, self.sides))
+
+print('-----die6-----------')
+die6 = Die()
+for i in range(10):
+    die6.roll_side()
+
+print('-----die10-----------')
+die10 = Die(10)
+for i in range(10):
+    die10.roll_side()
+
+print('-----die20-----------')
+die20 = Die(20)
+for i in range(10):
+    die20.roll_side()
+
 ````
-。
-9-15 Python Module of the Week ： 要了解Python标准库， 一个很不错的资源是网站Python Module of the Week。 请访问http://pymotw.com/ 并查看其中的目录， 在其中找一个你感兴趣的模块进行探索， 或阅读模块collections 和random 的文档。
+
